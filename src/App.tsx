@@ -14,6 +14,8 @@ const App: React.FC = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      {/* Redirect to home if the route doesn't match */}
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
